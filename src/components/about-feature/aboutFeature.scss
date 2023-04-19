@@ -1,0 +1,121 @@
+.about-feature {
+  .container {
+    width: 85%;
+    margin: auto;
+
+    .title {
+      text-align: center;
+      width: 60%;
+      margin: auto;
+      margin-bottom: 80px;
+
+      span {
+        font-size: 20px;
+        color: #644222;
+      }
+
+      h1 {
+        font-size: 45px;
+        opacity: 0.8;
+        margin-bottom: 20px;
+      }
+
+      p {
+        opacity: 0.6;
+      }
+    }
+
+    .features {
+      display: flex;
+      margin-bottom: 100px;
+
+      .left {
+        flex: 1;
+        border-right: 2px solid #644222;
+        padding: 100px;
+        padding-top: 0;
+
+        .items {
+          .item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            gap: 20px;
+            position: relative;
+            margin-bottom: 80%;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            img {
+              width: 100%;
+            }
+
+            h2 {
+              font-size: 35px;
+              color: rgba($color: #000000, $alpha: 0.8);
+            }
+
+            span {
+              text-align: right;
+              color: rgba($color: #000000, $alpha: 0.7);
+              font-size: 18px;
+            }
+
+            b {
+              width: 15px;
+              height: 15px;
+              background-color: #644222;
+              border-radius: 50%;
+              position: absolute;
+              right: -108px;
+              top: 50%;
+            }
+          }
+        }
+      }
+
+      .right {
+        flex: 1;
+        padding: 100px;
+        padding-top: 0;
+
+        .items {
+          .item {
+            margin-top: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            position: relative;
+
+            img {
+              width: 100%;
+            }
+
+            h2 {
+              font-size: 35px;
+              color: rgba($color: #000000, $alpha: 0.8);
+            }
+
+            span {
+              color: rgba($color: #000000, $alpha: 0.7);
+              font-size: 18px;
+            }
+
+            b {
+              width: 15px;
+              height: 15px;
+              background-color: #644222;
+              border-radius: 50%;
+              position: absolute;
+              left: -108px;
+              top: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
