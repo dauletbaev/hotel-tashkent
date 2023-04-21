@@ -70,9 +70,8 @@
           border-top: none;
 
           span {
-            position: absolute;
-            top: 45%;
-            padding: 10px 20px;
+            padding: 8px 15px;
+            width: max-content;
             background-color: #644222;
             color: #fff;
           }
@@ -91,6 +90,69 @@
             color: #644222;
             border-bottom: 3px solid #644222;
             width: max-content;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .new {
+    .container {
+      padding: 0;
+      width: 95%;
+
+      .title {
+        width: 100%;
+      }
+
+      .items {
+        padding: 0;
+        gap: 10px;
+
+        .item {
+          .bottom {
+            h2 {
+              font-size: 20px;
+            }
+
+            p {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .new {
+    padding-top: 30px;
+
+    .container {
+      width: 90%;
+      .title {
+        h1 {
+          font-size: 35px;
+        }
+      }
+
+      .items {
+        flex-direction: column;
+
+        .item {
+          .bottom {
+            gap: 10px;
+
+            h2 {
+              font-size: 20px;
+            }
+
+            p {
+              font-size: 18px;
+            }
           }
         }
       }

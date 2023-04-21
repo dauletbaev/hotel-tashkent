@@ -1,12 +1,13 @@
 // import './new.scss'
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
+import style from "../styles/New.module.scss";
 
 function New() {
   return (
-    <div className="new">
-      <div className="container">
-        <div className="title">
+    <div className={style.new}>
+      <div className={style.container}>
+        <div className={style.title}>
           <span>Our Blog</span>
           <h1>Latest Blog & News</h1>
           <p>
@@ -15,12 +16,12 @@ function New() {
             Cras lobortis pulvinar dolor, sit amet ullamcorper dolor iaculis vel
           </p>
         </div>
-        <div className="items">
-          <div className="item">
-            <div className="top">
+        <div className={style.items}>
+          <div className={style.item}>
+            <div className={style.top}>
               <Image src="/images/new-1.jpg" width={200} height={250} alt="" />
             </div>
-            <div className="bottom">
+            <div className={style.bottom}>
               <span>3rd Aprip 2023</span>
               <h2>Cras accumsan nulla nec lacus ultricies placerat.</h2>
               <p>
@@ -31,11 +32,11 @@ function New() {
             </div>
           </div>
 
-          <div className="item">
-            <div className="top">
+          <div className={style.item}>
+            <div className={style.top}>
               <Image src="/images/new-2.jpg" width={200} height={250} alt="" />
             </div>
-            <div className="bottom">
+            <div className={style.bottom}>
               <span>3rd Aprip 2023</span>
               <h2>Cras accumsan nulla nec lacus ultricies placerat.</h2>
               <p>
@@ -46,11 +47,11 @@ function New() {
             </div>
           </div>
 
-          <div className="item">
-            <div className="top">
+          <div className={style.item}>
+            <div className={style.top}>
               <Image src="/images/new-3.jpg" width={200} height={250} alt="" />
             </div>
-            <div className="bottom">
+            <div className={style.bottom}>
               <span>3rd Aprip 2023</span>
               <h2>Cras accumsan nulla nec lacus ultricies placerat.</h2>
               <p>
@@ -64,7 +65,7 @@ function New() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default New
+export default New;

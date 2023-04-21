@@ -126,3 +126,58 @@
     }
   }
 }
+
+@media screen and (max-width: 992px) {
+  .footer {
+    .container {
+      gap: 20px;
+      .left {
+        width: 200px;
+      }
+
+      .right {
+        gap: 30px;
+
+        .links {
+          width: 100px;
+        }
+
+        .subscribe {
+          .input {
+            input {
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    .container {
+      flex-direction: column;
+
+      .left {
+        width: 100%;
+      }
+
+      .right {
+        gap: 30px;
+
+        .links {
+          width: 100px;
+        }
+
+        .subscribe {
+          .input {
+            input {
+              padding: 5px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

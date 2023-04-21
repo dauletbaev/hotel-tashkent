@@ -1,12 +1,13 @@
 // import './slide.scss'
-import Image from 'next/image'
-import { IconStar } from '@tabler/icons-react'
+import Image from "next/image";
+import { IconStar } from "@tabler/icons-react";
+import style from "../styles/Slide.module.scss";
 
 function Slide() {
   return (
-    <div className="slide">
-      <div className="container">
-        <div className="title">
+    <div className={style.slide}>
+      <div className={style.container}>
+        <div className={style.title}>
           <span>Testimonial</span>
           <h1>What Our Clients Says</h1>
           <p>
@@ -15,32 +16,37 @@ function Slide() {
             Cras lobortis pulvinar dolor, sit amet ullamcorper dolor iaculis vel
           </p>
         </div>
-        <div className="slide-container">
-          <div className="slide-item">
-            <div className="top">
-              <Image
-                src="/images/testi-avatar-1.png"
-                width={200}
-                height={250}
-                alt=""
-              />
-              <div>
-                <h2>Jina Nilson</h2>
-                <span>Client</span>
+        <div className={style.slideContainer}>
+          <div className={style.slideItem}>
+            <div className={style.top}>
+              <div className={style.left}>
+                <Image
+                  src="/images/testi-avatar-1.png"
+                  width={200}
+                  height={250}
+                  alt=""
+                  className={style.img1}
+                />
+
+                <div>
+                  <h2>Jina Nilson</h2>
+                  <span>Client</span>
+                </div>
               </div>
               <Image
                 src="/images/testi-quote.png"
                 height={250}
                 width={200}
                 alt=""
+                className={style.img2}
               />
             </div>
-            <div className="stars">
-              <IconStar className="icon" />
-              <IconStar className="icon" />
-              <IconStar className="icon" />
-              <IconStar className="icon" />
-              <IconStar className="icon" />
+            <div className={style.stars}>
+              <IconStar className={style.icon} />
+              <IconStar className={style.icon} />
+              <IconStar className={style.icon} />
+              <IconStar className={style.icon} />
+              <IconStar className={style.icon} />
             </div>
             <p>
               “Phasellus aliquam quis lorem amet dapibus feugiat vitae purus
@@ -49,31 +55,35 @@ function Slide() {
             </p>
           </div>
 
-          <div className="slide-item">
-            <div className="top">
-              <Image
-                src="/images/testi-avatar-1.png"
-                width={200}
-                height={250}
-                alt=""
-              />
-              <div>
-                <h2>Jina Nilson</h2>
-                <span>Client</span>
+          <div className={style.slideItem}>
+            <div className={style.top}>
+              <div className={style.left}>
+                <Image
+                  src="/images/testi-avatar-1.png"
+                  width={200}
+                  height={250}
+                  alt=""
+                  className={style.img1}
+                />
+                <div>
+                  <h2>Jina Nilson</h2>
+                  <span>Client</span>
+                </div>
               </div>
               <Image
                 src="/images/testi-quote.png"
                 height={250}
                 width={200}
                 alt=""
+                className={style.img2}
               />
             </div>
-            <div className="stars">
-              <IconStar className="icon" />
-              <IconStar className="icon" />
-              <IconStar className="icon" />
-              <IconStar className="icon" />
-              <IconStar className="icon" />
+            <div className={style.stars}>
+              <IconStar className={style.icon} />
+              <IconStar className={style.icon} />
+              <IconStar className={style.icon} />
+              <IconStar className={style.icon} />
+              <IconStar className={style.icon} />
             </div>
             <p>
               “Phasellus aliquam quis lorem amet dapibus feugiat vitae purus
@@ -82,31 +92,35 @@ function Slide() {
             </p>
           </div>
 
-          <div className="slide-item">
-            <div className="top">
-              <Image
-                src="/images/testi-avatar-1.png"
-                width={200}
-                height={250}
-                alt=""
-              />
-              <div>
-                <h2>Jina Nilson</h2>
-                <span>Client</span>
+          <div className={style.slideItem}>
+            <div className={style.top}>
+              <div className={style.left}>
+                <Image
+                  src="/images/testi-avatar-1.png"
+                  width={200}
+                  height={250}
+                  alt=""
+                  className={style.img1}
+                />
+                <div>
+                  <h2>Jina Nilson</h2>
+                  <span>Client</span>
+                </div>
               </div>
               <Image
                 src="/images/testi-quote.png"
                 width={200}
                 height={250}
                 alt=""
+                className={style.img2}
               />
             </div>
-            <div className="stars">
-              <IconStar className="icon" />
-              <IconStar className="icon" />
-              <IconStar className="icon" />
-              <IconStar className="icon" />
-              <IconStar className="icon" />
+            <div className={style.stars}>
+              <IconStar className={style.icon} />
+              <IconStar className={style.icon} />
+              <IconStar className={style.icon} />
+              <IconStar className={style.icon} />
+              <IconStar className={style.icon} />
             </div>
             <p>
               “Phasellus aliquam quis lorem amet dapibus feugiat vitae purus
@@ -117,7 +131,7 @@ function Slide() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Slide
+export default Slide;
