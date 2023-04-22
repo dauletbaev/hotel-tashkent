@@ -1,0 +1,28 @@
+.header {
+  background-color: #644222;
+
+  .container {
+    // "container w-full min-h-[4rem] px-20 flex items-center justify-between text-[#fff]"
+    width: 85%;
+    margin: auto;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    .container {
+      width: 90%;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .header {
+    display: none;
+  }
+}

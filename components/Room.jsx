@@ -14,9 +14,9 @@ function Room({ page }) {
     <div className={style.room}>
       <div className={style.container}>
         <div className={style.title}>
-          {page !== "view" && <span>Room</span>}
-          <h1>{page === "view" ? "Other rooms" : "Rooms & Suites"}</h1>
-          {page !== "view" && (
+          {page !== "single" && <span>Room</span>}
+          <h1>{page === "single" ? "Other rooms" : "Rooms & Suites"}</h1>
+          {page !== "single" && (
             <p>
               Proin consectetur non dolor vitae pulvinar. Pellentesque
               sollicitudin dolor eget neque viverra, sed interdum metus
@@ -38,8 +38,8 @@ function Room({ page }) {
                 />
                 <div className={style.bottom}>
                   <div className={style.buttons}>
-                    <Link href="/view-room">View</Link>
-                    <Link href="/">Book Now</Link>
+                    <Link href="/single-room">View</Link>
+                    <Link href="/book-now">Book Now</Link>
                   </div>
                   <h2>Delux Double Room</h2>
                   <p>
@@ -66,8 +66,8 @@ function Room({ page }) {
                 />
                 <div className={style.bottom}>
                   <div className={style.buttons}>
-                    <Link href="/">View</Link>
-                    <Link href="/">Book Now</Link>
+                    <Link href="/single-room">View</Link>
+                    <Link href="/book-now">Book Now</Link>
                   </div>
                   <h2>Super Balcony Double Room</h2>
                   <p>
@@ -96,8 +96,8 @@ function Room({ page }) {
                 />
                 <div className={style.bottom}>
                   <div className={style.buttons}>
-                    <Link href="/">View</Link>
-                    <Link href="/">Book Now</Link>
+                    <Link href="/single-room">View</Link>
+                    <Link href="/book-now">Book Now</Link>
                   </div>
                   <h2>Superior Double Room</h2>
                   <p>
@@ -124,8 +124,8 @@ function Room({ page }) {
                 />
                 <div className={style.bottom}>
                   <div className={style.buttons}>
-                    <Link href="/">View</Link>
-                    <Link href="/">Book Now</Link>
+                    <Link href="/single-room">View</Link>
+                    <Link href="/book-now">Book Now</Link>
                   </div>
                   <h2>Superior Double Room</h2>
                   <p>

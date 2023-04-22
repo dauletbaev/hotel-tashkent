@@ -32,13 +32,13 @@
           display: flex;
           align-items: center;
 
-          .icon-cover {
+          .iconCover {
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             background-color: #fff;
-            color: rgba($color: #000000, $alpha: 0.4);
+            color: #644222;
             padding: 5px;
             font-size: 12px;
             margin-right: 10px;
@@ -130,9 +130,12 @@
 @media screen and (max-width: 992px) {
   .footer {
     .container {
+      width: 95%;
       gap: 20px;
+
       .left {
         width: 200px;
+        margin-bottom: 50px;
       }
 
       .right {
@@ -143,6 +146,8 @@
         }
 
         .subscribe {
+          width: 95%;
+
           .input {
             input {
               padding: 5px;
@@ -154,7 +159,7 @@
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   .footer {
     .container {
       flex-direction: column;
@@ -177,6 +182,16 @@
             }
           }
         }
+      }
+    }
+
+    .copyright {
+      display: flex;
+      flex-direction: column;
+
+      .cover {
+        width: 100%;
+        flex-direction: column;
       }
     }
   }

@@ -67,10 +67,24 @@
           border-bottom: 2px solid #fff;
         }
 
+        &.lang {
+          display: flex;
+          align-items: center;
+          border: none;
+
+          img {
+            margin-right: 15px;
+          }
+        }
+
         a {
           text-decoration: none;
           color: inherit;
         }
+      }
+
+      .bottom {
+        display: none;
       }
 
       .active {
@@ -108,11 +122,11 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 920px) {
   .navbar {
     .container {
       ul {
-        width: 250px;
+        width: 300px;
         height: 100vh;
         background-color: #fff;
         color: rgba($color: #000000, $alpha: 0.6);
@@ -122,12 +136,9 @@
         top: 0;
         right: -350px;
         transition: all 0.6s ease-in-out;
-
-        li {
-          border-bottom: 1px solid #644222;
-          width: 100%;
-          padding-bottom: 10px;
-        }
+        -webkit-box-shadow: -9px 2px 62px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: -9px 2px 62px 0px rgba(34, 60, 80, 0.2);
+        box-shadow: -9px 2px 62px 0px rgba(34, 60, 80, 0.2);
 
         &.active {
           right: 0;
@@ -148,6 +159,100 @@
             padding: 10px;
             border-radius: 50%;
             cursor: pointer;
+          }
+        }
+
+        li {
+          border-bottom: 1px solid #8b643f;
+          width: 100%;
+          padding: 10px 0;
+
+          &:hover {
+            border-bottom: 1px solid #644222;
+          }
+
+          &.lang {
+            padding-top: 20px;
+            border: none;
+          }
+        }
+
+        .bottom {
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+
+          h2 {
+            font-size: 20px;
+          }
+
+          .contact {
+            display: flex;
+            flex-direction: column;
+
+            div {
+              display: flex;
+              align-items: center;
+              padding: 15px 0;
+
+              .iconWrapper {
+                border: 1px solid #644222;
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+                padding: 10px;
+                color: #644222;
+
+                &:hover {
+                  background-color: #644222;
+                  color: #fff;
+                }
+              }
+
+              .text {
+                font-size: 17px;
+              }
+            }
+
+            a {
+              margin: 0;
+              padding: 15px 0;
+              display: flex;
+              align-items: center;
+
+              .iconWrapper {
+                border: 1px solid #644222;
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+                padding: 10px;
+                color: #644222;
+
+                &:hover {
+                  background-color: #644222;
+                  color: #fff;
+                }
+              }
+            }
+          }
+
+          .links {
+            margin-top: 20px;
+            display: flex;
+
+            .iconWrapper {
+              border: 1px solid #644222;
+              display: flex;
+              align-items: center;
+              margin-right: 20px;
+              padding: 10px;
+              color: #644222;
+
+              &:hover {
+                background-color: #644222;
+                color: #fff;
+              }
+            }
           }
         }
       }

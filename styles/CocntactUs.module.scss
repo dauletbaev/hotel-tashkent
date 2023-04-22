@@ -1,4 +1,4 @@
-.contact-us {
+.contactUs {
   background-color: #fff;
   padding-top: 100px;
 
@@ -46,9 +46,7 @@
             border-bottom: none;
           }
 
-          .icon-wrapper {
-            width: 60px;
-            height: 60px;
+          .iconWrapper {
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -56,6 +54,7 @@
             color: white;
             background-color: #644222;
             margin-right: 30px;
+            padding: 20px;
           }
         }
       }
@@ -115,13 +114,74 @@
     padding: 100px 0;
     background-color: #f7f5f1;
 
-    .map-wrapper {
+    .mapWrapper {
       width: 85%;
       margin: auto;
 
       iframe {
         width: 100%;
-        border: none;
+        border: 1px solid #644222;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .contactUs {
+    .container {
+      .items {
+        flex-direction: column;
+
+        .left {
+          width: 100%;
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contactUs {
+    padding-top: 30px;
+
+    .container {
+      width: 90%;
+
+      .title {
+        width: 100%;
+
+        h1 {
+          font-size: 35px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .contactUs {
+    .container {
+      .items {
+        .right {
+          padding: 0;
+
+          .wrapper {
+            padding: 20px;
+
+            .input {
+              flex-direction: column;
+            }
+          }
+        }
+      }
+    }
+
+    .map {
+      padding: 30px 0;
+
+      .mapWrapper {
+        padding: 0;
       }
     }
   }

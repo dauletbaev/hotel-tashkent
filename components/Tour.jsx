@@ -1,12 +1,13 @@
-import Image from 'next/image'
+import Image from "next/image";
+import style from "../styles/Tour.module.scss";
 
 function Tour() {
   return (
-    <div className="tour">
-      <div className="left">
+    <div className={style.tour}>
+      <div className={style.left}>
         <Image src="/images/tour.png" width={200} height={250} alt="" />
       </div>
-      <div className="right">
+      <div className={style.right}>
         <span>Luxury Hotel</span>
         <h1>Pearl Of The Adriatic.</h1>
         <p>
@@ -23,7 +24,7 @@ function Tour() {
         </p>
       </div>
     </div>
-  )
+  );
 }
 
-export default Tour
+export default Tour;

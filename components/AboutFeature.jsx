@@ -1,10 +1,11 @@
-import Image from 'next/image'
+import Image from "next/image";
+import style from "../styles/AboutFeature.module.scss";
 
 function AboutFeature() {
   return (
-    <div className="about-feature">
-      <div className="container">
-        <div className="title">
+    <div className={style.aboutFeature}>
+      <div className={style.container}>
+        <div className={style.title}>
           <span>Our Features</span>
           <h1>Sunny and warm Nukus is the capital of Karakalpakstan</h1>
           <p>
@@ -13,10 +14,10 @@ function AboutFeature() {
             Cras lobortis pulvinar dolor, sit amet ullamcorper dolor iaculis vel
           </p>
         </div>
-        <div className="features">
-          <div className="left">
-            <div className="items">
-              <div className="item">
+        <div className={style.features}>
+          <div className={style.left}>
+            <div className={style.items}>
+              <div className={style.item}>
                 <Image
                   src="/images/about-feature-1.jpg"
                   width={200}
@@ -31,7 +32,7 @@ function AboutFeature() {
                 </span>
                 <b></b>
               </div>
-              <div className="item">
+              <div className={style.item}>
                 <Image
                   src="/images/about-feature-2.jpeg"
                   width={200}
@@ -47,9 +48,9 @@ function AboutFeature() {
               </div>
             </div>
           </div>
-          <div className="right">
-            <div className="items">
-              <div className="item">
+          <div className={style.right}>
+            <div className={style.items}>
+              <div className={style.item}>
                 <Image
                   src="/images/about-feature-3.jpg"
                   width={200}
@@ -69,7 +70,7 @@ function AboutFeature() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default AboutFeature
+export default AboutFeature;

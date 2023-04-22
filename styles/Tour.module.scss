@@ -33,3 +33,21 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .tour {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .tour {
+    flex-direction: column;
+
+    .right {
+      h1 {
+        font-size: 30px;
+      }
+    }
+  }
+}
