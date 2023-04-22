@@ -11,6 +11,8 @@
     justify-content: space-between;
 
     .left {
+      flex: 1;
+
       .logo {
         width: max-content;
         margin-bottom: 30px;
@@ -48,11 +50,15 @@
     }
 
     .right {
+      flex: 1;
+      // margin-top: 80px;
       display: flex;
-      gap: 150px;
+      // gap: 150px;
 
       .links {
         h2 {
+          font-size: 20px;
+          font-weight: bold;
           margin-bottom: 30px;
         }
 
@@ -162,7 +168,7 @@
 @media screen and (max-width: 768px) {
   .footer {
     .container {
-      flex-direction: column;
+      // flex-direction: column;
 
       .left {
         width: 100%;

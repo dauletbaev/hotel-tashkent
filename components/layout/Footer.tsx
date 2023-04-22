@@ -58,7 +58,7 @@ function Footer() {
               </li>
             </ul>
           </div>
-          <div className={style.subscribe}>
+          {/* <div className={style.subscribe}>
             <h2>Subscribe To Our Newsletter</h2>
             <span>
               Subscribe our newsletter to get our latest update & News
@@ -69,7 +69,7 @@ function Footer() {
                 <IconBrandTelegram className={style.icon} />
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
 

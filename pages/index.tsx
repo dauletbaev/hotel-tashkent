@@ -1,9 +1,9 @@
-import AboutUs from '~/components/AboutUs'
-import Explore from '~/components/Explore'
-import New from '~/components/New'
-import Room from '~/components/Room'
-import Slide from '~/components/Slide'
-import Slider from '~/components/Slider'
+import AboutUs from "~/components/AboutUs";
+import Explore from "~/components/Explore";
+import New from "~/components/New";
+import Room from "~/components/Room";
+import Slide from "~/components/Slide";
+import Slider from "~/components/Slider";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <Explore />
       <Room page="home" />
       <Slide />
-      <New />
+      {/* <New /> */}
     </>
-  )
+  );
 }
