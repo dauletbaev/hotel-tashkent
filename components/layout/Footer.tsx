@@ -1,13 +1,15 @@
-import Link from "next/link";
+import Link from 'next/link'
 import {
   IconMapPin,
   IconMail,
   IconPhone,
   IconBrandTelegram,
-} from "@tabler/icons-react";
-import style from "../../styles/Footer.module.scss";
+  IconBrandInstagram,
+  IconBrandFacebook,
+} from '@tabler/icons-react'
+import style from '../../styles/Footer.module.scss'
 
-const year = new Date().getFullYear();
+const year = new Date().getFullYear()
 
 function Footer() {
   return (
@@ -35,7 +37,7 @@ function Footer() {
               <div className={style.iconCover}>
                 <IconMapPin className={style.icon} />
               </div>
-              1247/Plot No. 39, 15th, Nukus, Karakalpakstan
+              <span>1247/Plot No. 39, 15th, Nukus, Karakalpakstan</span>
             </div>
           </div>
         </div>
@@ -71,6 +73,41 @@ function Footer() {
             </form>
           </div> */}
         </div>
+
+        <div>
+          <h2 className="font-bold text-[20px] mb-[30px] max-md:my-4">
+            We are in social media
+          </h2>
+          <div className="flex max-md:items-center max-md:justify-center flex-col gap-2">
+            <Link
+              href="https://f.me/21345"
+              className="flex items-center gap-2"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <IconBrandFacebook />
+              <span>Facebook</span>
+            </Link>
+            <Link
+              href="https://instagram.com/21345"
+              target="_blank"
+              className="flex items-center gap-2"
+              rel="noreferrer noopener"
+            >
+              <IconBrandInstagram />
+              <span>Instagram</span>
+            </Link>
+            <Link
+              href="https://t.me/21345"
+              target="_blank"
+              className="flex items-center gap-2"
+              rel="noreferrer noopener"
+            >
+              <IconBrandTelegram />
+              <span>Telegram</span>
+            </Link>
+          </div>
+        </div>
       </div>
 
       <div className={style.copyright}>
@@ -86,7 +123,7 @@ function Footer() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default Footer;
+export default Footer

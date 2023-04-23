@@ -1,4 +1,3 @@
-// import './explore.scss'
 import Link from "next/link";
 import Image from "next/image";
 import { IconArrowRight } from "@tabler/icons-react";

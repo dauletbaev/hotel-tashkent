@@ -1,56 +1,57 @@
-"use client";
-import { useEffect, useState } from "react";
-import { IconChevronRight, IconChevronLeft } from "@tabler/icons-react";
-import style from "../styles/ImageSlider.module.scss";
+import { useEffect, useState } from 'react'
+import { IconChevronRight, IconChevronLeft } from '@tabler/icons-react'
+import Link from 'next/link'
+
+import style from '../styles/ImageSlider.module.scss'
 
 interface Props {
   slides: {
-    url: string;
-    title: string;
-  }[];
+    url: string
+    title: string
+  }[]
 }
 
 function ImageSlider({ slides }: Props) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [iconPosition, setIconPosition] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [iconPosition, setIconPosition] = useState(false)
 
   const goToPrevious = () => {
     if (currentIndex === 0) {
-      setCurrentIndex(1);
+      setCurrentIndex(1)
     } else {
-      setCurrentIndex(currentIndex - 1);
+      setCurrentIndex(currentIndex - 1)
     }
-  };
+  }
 
   const goToNext = () => {
     if (currentIndex === 1) {
-      setCurrentIndex(0);
+      setCurrentIndex(0)
     } else {
-      setCurrentIndex(currentIndex + 1);
+      setCurrentIndex(currentIndex + 1)
     }
-  };
+  }
 
   useEffect(() => {
     const timer = setTimeout(() => {
       if (currentIndex === 0) {
-        setCurrentIndex(1);
+        setCurrentIndex(1)
       } else {
-        setCurrentIndex(0);
+        setCurrentIndex(0)
       }
-    }, 3000);
+    }, 3000)
 
-    return () => clearTimeout(timer);
-  }, [currentIndex]);
+    return () => clearTimeout(timer)
+  }, [currentIndex])
 
-  console.log(slides[0].title);
+  console.log(slides[0].title)
   return (
     <div
       className={style.imageSlider}
       style={
-        slides[0].title === "single"
+        slides[0].title === 'single'
           ? {
               backgroundImage: `url(${slides[currentIndex].url})`,
-              backgroundSize: "100%",
+              backgroundSize: '100%',
             }
           : { backgroundImage: `url(${slides[currentIndex].url})` }
       }
@@ -58,7 +59,7 @@ function ImageSlider({ slides }: Props) {
       onMouseLeave={(e) => setIconPosition(false)}
     >
       <div className={style.container}>
-        {slides[0].title !== "single" && (
+        {slides[0].title !== 'single' && (
           <>
             <h1>{slides[currentIndex].title}</h1>
             <p>
@@ -66,7 +67,9 @@ function ImageSlider({ slides }: Props) {
               vitae expedita voluptatum quis laborum nobis sit, ab aperiam sequi
               odio voluptates veritatis.
             </p>
-            <button>DISCOVER MORE</button>
+            <Link href="/book-now" className={style.bookNow}>
+              Book Now
+            </Link>
           </>
         )}
         <div
@@ -87,7 +90,7 @@ function ImageSlider({ slides }: Props) {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default ImageSlider;
+export default ImageSlider
