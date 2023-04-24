@@ -23,7 +23,6 @@ function Header() {
             <span>{TEL}</span>
           </Link>
         </div>
-
         <div className="flex gap-2">
           {locales.map((lng) => {
             if (lng === lang) return null;

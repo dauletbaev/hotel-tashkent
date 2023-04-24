@@ -5,7 +5,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import style from "../../styles/Navbar.module.scss";
 import useTranslation from "next-translate/useTranslation";
-
 import {
   IconClockHour4,
   IconPhone,
@@ -14,13 +13,18 @@ import {
   IconBrandInstagram,
   IconBrandFacebook,
 } from "@tabler/icons-react";
+import Image from "next/image";
+import { locales } from "~/i18n";
 
 function Navbar() {
-  const { t } = useTranslation("common");
-
+  const { t, lang } = useTranslation("common");
   const pathname = usePathname();
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isMenuClick, setIsMenuClick] = useState(false);
+
+  const closeMenu = useCallback(() => {
+    setIsMenuClick(false);
+  }, []);
 
   const handleScroll = useCallback(() => {
     const position = window.pageYOffset;
@@ -60,7 +64,7 @@ function Navbar() {
                 </div>
               </Link>
             </div>
-            <div className={style.close} onClick={() => setIsMenuClick(false)}>
+            <div className={style.close} onClick={closeMenu}>
               <IconX className={style.icon} />
             </div>
           </div>
@@ -76,6 +80,19 @@ function Navbar() {
           </li>
           <li>
             <Link href="/contact">{t("menu_contact")}</Link>
+          </li>
+
+          <li className={style.lang}>
+            {locales.map((lng) => (
+              <Link href="/" locale={lng} key={lng}>
+                <Image
+                  src={`/images/${lng}.webp`}
+                  width={20}
+                  height={20}
+                  alt={`${lang}`}
+                />
+              </Link>
+            ))}
           </li>
 
           <div className={style.bottom}>
@@ -119,7 +136,13 @@ function Navbar() {
             </div>
           </div>
         </ul>
+
         <div></div>
+
+        {/* <Link href="/book-now" className={style.bookNow}>
+          Book Now
+        </Link> */}
+
         <div className={style.menu} onClick={() => setIsMenuClick(true)}>
           <IconMenu2 className={style.icon} />
         </div>

@@ -99,6 +99,41 @@ function Footer() {
             </form>
           </div> */}
         </div>
+
+        <div>
+          <h2 className="font-bold text-[20px] mb-[30px] max-md:my-4">
+            We are in social media
+          </h2>
+          <div className="flex max-md:items-center max-md:justify-center flex-col gap-2">
+            <Link
+              href="https://f.me/21345"
+              className="flex items-center gap-2"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <IconBrandFacebook />
+              <span>Facebook</span>
+            </Link>
+            <Link
+              href="https://instagram.com/21345"
+              target="_blank"
+              className="flex items-center gap-2"
+              rel="noreferrer noopener"
+            >
+              <IconBrandInstagram />
+              <span>Instagram</span>
+            </Link>
+            <Link
+              href="https://t.me/21345"
+              target="_blank"
+              className="flex items-center gap-2"
+              rel="noreferrer noopener"
+            >
+              <IconBrandTelegram />
+              <span>Telegram</span>
+            </Link>
+          </div>
+        </div>
       </div>
 
       <div className={style.copyright}>

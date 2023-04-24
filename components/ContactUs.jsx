@@ -74,12 +74,15 @@ function ContactUs() {
                   />
                 </div>
                 <div className={style.input}>
-                  <input type="text" placeholder={t("contact_form_phone")} />
+                  <input
+                    type="text"
+                    placeholder={t("contact_form_phone_number")}
+                  />
                   <input type="email" placeholder={t("contact_form_email")} />
                 </div>
 
                 <textarea placeholder={t("contact_form_comment")} />
-                <button>{t("contact_submit")}</button>
+                <button>{t("contact_form_submit")}</button>
               </form>
             </div>
           </div>
