@@ -1,14 +1,14 @@
 import ContactUs from "~/components/ContactUs";
 import style from "../styles/Contact.module.scss";
+import useTranslation from "next-translate/useTranslation";
 
 export default function Contact() {
+  const { t } = useTranslation("common");
+
   return (
     <div className={style.contact}>
       <div className={style.top}>
-        <h1>
-          Great choice for a relaxing vacation for families with children or a
-          group of friends
-        </h1>
+        <h1>{t("contact_slider_title")}</h1>
       </div>
 
       <ContactUs />

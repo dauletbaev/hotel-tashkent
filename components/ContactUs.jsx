@@ -5,19 +5,18 @@ import {
   IconPhone,
 } from "@tabler/icons-react";
 import style from "../styles/CocntactUs.module.scss";
+import useTranslation from "next-translate/useTranslation";
 
 function ContactUs() {
+  const { t } = useTranslation("common");
+
   return (
     <div className={style.contactUs}>
       <div className={style.container}>
         <div className={style.title}>
-          <span>Contact Us</span>
-          <h1>Easy to find</h1>
-          <p>
-            Proin consectetur non dolor vitae pulvinar. Pellentesque
-            sollicitudin dolor eget neque viverra, sed interdum metus interdum.
-            Cras lobortis pulvinar dolor, sit amet ullamcorper dolor iaculis vel
-          </p>
+          <span>{t("contact_sub_title")}</span>
+          <h1>{t("contact_title")}</h1>
+          <p>{t("contact_desc")}</p>
         </div>
         <div className={style.items}>
           <div className={style.left}>
@@ -26,8 +25,8 @@ function ContactUs() {
                 <IconMapPin className={style.icon} />
               </div>
               <div className={style.desc}>
-                <h2>Address</h2>
-                <p>1247/Plot No. 39, 15th, Nukus, Karakalpakstan</p>
+                <h2>{t("contact_address")}</h2>
+                <p>{t("hotel_address")}</p>
               </div>
             </div>
             <div className={style.item}>
@@ -35,8 +34,8 @@ function ContactUs() {
                 <IconClockHour3 className={style.icon} />
               </div>
               <div className={style.desc}>
-                <h2>Working Hours</h2>
-                <p>Monday to Friday 09:00 to 18:30 Saturday 15:30</p>
+                <h2>{t("contact_working_hours")}</h2>
+                <p>{t("working_hours")}</p>
               </div>
             </div>
             <div className={style.item}>
@@ -44,8 +43,8 @@ function ContactUs() {
                 <IconMailOpened className={style.icon} />
               </div>
               <div className={style.desc}>
-                <h2>Message Us</h2>
-                <p>support@example.com info@example.com</p>
+                <h2>{t("contact_message_us")}</h2>
+                <p>{t("email_address")}</p>
               </div>
             </div>
             <div className={style.item}>
@@ -53,27 +52,34 @@ function ContactUs() {
                 <IconPhone className={style.icon} />
               </div>
               <div className={style.desc}>
-                <h2>Phone</h2>
-                <p>+998 93 772-71-66</p>
+                <h2>{t("contact_phone")}</h2>
+                <p>{t("phone_number_1")}</p>
+                <p>{t("phone_number_2")}</p>
               </div>
             </div>
           </div>
 
           <div className={style.right}>
             <div className={style.wrapper}>
-              <h2>Get In Touch</h2>
+              <h2>{t("contact_form_title")}</h2>
               <form>
                 <div className={style.input}>
-                  <input type="text" placeholder="First Name" />
-                  <input type="text" placeholder="Last Name" />
+                  <input
+                    type="text"
+                    placeholder={t("contact_form_first_name")}
+                  />
+                  <input
+                    type="text"
+                    placeholder={t("contact_form_last_name")}
+                  />
                 </div>
                 <div className={style.input}>
-                  <input type="text" placeholder="Phone No." />
-                  <input type="email" placeholder="Email" />
+                  <input type="text" placeholder={t("contact_form_phone")} />
+                  <input type="email" placeholder={t("contact_form_email")} />
                 </div>
 
-                <textarea placeholder="Write comments" />
-                <button>SUBMIT NOW</button>
+                <textarea placeholder={t("contact_form_comment")} />
+                <button>{t("contact_submit")}</button>
               </form>
             </div>
           </div>

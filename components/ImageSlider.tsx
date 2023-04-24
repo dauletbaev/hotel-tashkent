@@ -2,15 +2,19 @@
 import { useEffect, useState } from "react";
 import { IconChevronRight, IconChevronLeft } from "@tabler/icons-react";
 import style from "../styles/ImageSlider.module.scss";
+import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
 
 interface Props {
   slides: {
     url: string;
     title: string;
   }[];
+  page: string;
 }
 
-function ImageSlider({ slides }: Props) {
+function ImageSlider({ slides, page }: Props) {
+  const { t } = useTranslation("common");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [iconPosition, setIconPosition] = useState(false);
 
@@ -57,35 +61,48 @@ function ImageSlider({ slides }: Props) {
       onMouseEnter={(e) => setIconPosition(true)}
       onMouseLeave={(e) => setIconPosition(false)}
     >
-      <div className={style.container}>
-        {slides[0].title !== "single" && (
-          <>
-            <h1>{slides[currentIndex].title}</h1>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-              vitae expedita voluptatum quis laborum nobis sit, ab aperiam sequi
-              odio voluptates veritatis.
-            </p>
-            <button>DISCOVER MORE</button>
-          </>
-        )}
-        <div
-          className={
-            iconPosition ? `${style.left} ${style.leftActive}` : style.left
-          }
-          onClick={goToPrevious}
-        >
-          <IconChevronLeft className={style.slideIcon} />
+      {page === "book-now" ? (
+        <div className="my-64 text-center text-2xl">
+          <p>{t("hotel_address")}</p>
+          <p>
+            {t("book_now_phone")} {t("phone_number_1")} {t("phone_number_2")}
+          </p>
+          <p>
+            {t("book_now_email")} {t("email_address")}
+          </p>
+          <p>
+            {t("book_now_instagram")} {t("instagram_accaunt")}
+          </p>
         </div>
-        <div
-          className={
-            iconPosition ? `${style.right} ${style.rightActive}` : style.right
-          }
-          onClick={goToNext}
-        >
-          <IconChevronRight className={style.slideIcon} />
+      ) : (
+        <div className={style.container}>
+          {slides[0].title !== "single" && (
+            <>
+              <h1>{slides[currentIndex].title}</h1>
+              <p>{t("home_slider_desc")}</p>
+              <Link href="/book-now" className={style.bookNow}>
+                Book Now
+              </Link>
+            </>
+          )}
+          <div
+            className={
+              iconPosition ? `${style.left} ${style.leftActive}` : style.left
+            }
+            onClick={goToPrevious}
+          >
+            <IconChevronLeft className={style.slideIcon} />
+          </div>
+          <div
+            className={
+              iconPosition ? `${style.right} ${style.rightActive}` : style.right
+            }
+            onClick={goToNext}
+          >
+            <IconChevronRight className={style.slideIcon} />
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

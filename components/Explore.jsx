@@ -1,21 +1,18 @@
-// import './explore.scss'
 import Link from "next/link";
 import Image from "next/image";
 import { IconArrowRight } from "@tabler/icons-react";
 import style from "../styles/Explore.module.scss";
+import useTranslation from "next-translate/useTranslation";
 
 function Explore() {
+  const { t } = useTranslation("common");
   return (
     <div className={style.explore}>
       <div className={style.container}>
         <div className={style.title}>
-          <span>Explore</span>
-          <h1>The Hotel</h1>
-          <p>
-            Proin consectetur non dolor vitae pulvinar. Pellentesque
-            sollicitudin dolor eget neque viverra, sed interdum metus interdum.
-            Cras lobortis pulvinar dolor, sit amet ullamcorper dolor iaculis vel
-          </p>
+          <span>{t("explore_sub_title")}</span>
+          <h1>{t("explore_title")}</h1>
+          <p>{t("explore_desc")}</p>
         </div>
 
         <div className={style.items}>
@@ -28,14 +25,12 @@ function Explore() {
                   height={250}
                   alt="Quality Room"
                 />
-                <h2>Quality room</h2>
-                <p>
-                  Nullam molestie lacus sit amet velit fermentum feugiat. Mauris
-                  auctor eget nunc sit amet.
-                </p>
+                <h2>{t("explore_feature_1_title")}</h2>
+                <p>{t("explore_feature_1_desc")}</p>
 
                 <Link href="/">
-                  Read More <IconArrowRight className={style.icon} />
+                  {t("explore_read_more")}
+                  <IconArrowRight className={style.icon} />
                 </Link>
               </div>
             </div>
@@ -47,14 +42,11 @@ function Explore() {
                   width={200}
                   alt="Quality Room"
                 />
-                <h2>Best Accommodation</h2>
-                <p>
-                  Nullam molestie lacus sit amet velit fermentum feugiat. Mauris
-                  auctor eget nunc sit amet.
-                </p>
+                <h2>{t("explore_feature_2_title")}</h2>
+                <p>{t("explore_feature_2_desc")}</p>
 
                 <Link href="/">
-                  Read More
+                  {t("explore_read_more")}
                   <IconArrowRight className={style.icon} />
                 </Link>
               </div>
@@ -69,14 +61,11 @@ function Explore() {
                   height={250}
                   alt="Quality Room"
                 />
-                <h2>Restaurants & Bars</h2>
-                <p>
-                  Nullam molestie lacus sit amet velit fermentum feugiat. Mauris
-                  auctor eget nunc sit amet.
-                </p>
+                <h2>{t("explore_feature_3_title")}</h2>
+                <p>{t("explore_feature_3_desc")}</p>
 
                 <Link href="/">
-                  Read More
+                  {t("explore_read_more")}
                   <IconArrowRight className={style.icon} />
                 </Link>
               </div>
@@ -89,14 +78,11 @@ function Explore() {
                   height={250}
                   alt="Quality Room"
                 />
-                <h2>Special Offers</h2>
-                <p>
-                  Nullam molestie lacus sit amet velit fermentum feugiat. Mauris
-                  auctor eget nunc sit amet.
-                </p>
+                <h2>{t("explore_feature_4_title")}</h2>
+                <p>{t("explore_feature_4_desc")}</p>
 
                 <Link href="/">
-                  Read More
+                  {t("explore_read_more")}
                   <IconArrowRight className={style.icon} />
                 </Link>
               </div>

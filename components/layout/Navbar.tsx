@@ -4,9 +4,8 @@ import { IconMenu2, IconX } from "@tabler/icons-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import style from "../../styles/Navbar.module.scss";
-import { locales } from "~/i18n.js";
 import useTranslation from "next-translate/useTranslation";
-import Image from "next/image";
+
 import {
   IconClockHour4,
   IconPhone,
@@ -16,10 +15,8 @@ import {
   IconBrandFacebook,
 } from "@tabler/icons-react";
 
-const TEL = "+998937727166";
-
 function Navbar() {
-  const { t, lang } = useTranslation("common");
+  const { t } = useTranslation("common");
 
   const pathname = usePathname();
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -69,36 +66,20 @@ function Navbar() {
           </div>
 
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/">{t("menu_home")}</Link>
           </li>
           <li>
-            <Link href="/rooms">Our Rooms</Link>
+            <Link href="/rooms">{t("menu_rooms")}</Link>
           </li>
           <li>
-            <Link href="/about">About</Link>
+            <Link href="/about">{t("menu_about")}</Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact">{t("menu_contact")}</Link>
           </li>
-          <li className={style.lang}>
-            {locales.map((lng) => {
-              if (lng === lang) return null;
 
-              return (
-                <Link href="/" locale={lng} key={lng}>
-                  <Image
-                    src={`/images/${lng}.webp`}
-                    width={20}
-                    height={20}
-                    alt={`${lang}`}
-                  />
-                  {/* {t(`language-name-${lng}`)} */}
-                </Link>
-              );
-            })}
-          </li>
           <div className={style.bottom}>
-            <h2>CONTACT INFO</h2>
+            <h2>{t("menu_contact_info")}</h2>
             <div className={style.contact}>
               <div>
                 <span className={style.iconWrapper}>
@@ -110,13 +91,19 @@ function Navbar() {
                 <span className={style.iconWrapper}>
                   <IconMail className={style.icon} size={15} />
                 </span>
-                <span className={style.text}>tashkenthotel2018@gmail.com</span>
+                <span className={style.text}>{t("email_address")}</span>
               </div>
-              <Link href={`tel:${TEL}`} className="ml-5 flex gap-1">
+              <Link
+                href={`tel:${t("phone_number_1")}`}
+                className="ml-5 flex gap-1"
+              >
                 <span className={style.iconWrapper}>
                   <IconPhone className={style.icon} size={15} />
                 </span>
-                <span className={style.text}>{TEL}</span>
+                <div className="flex flex-col">
+                  <span className={style.text}>{t("phone_number_1")}</span>
+                  <span className={style.text}>{t("phone_number_2")}</span>
+                </div>
               </Link>
             </div>
             <div className={style.links}>
@@ -132,9 +119,7 @@ function Navbar() {
             </div>
           </div>
         </ul>
-        <Link href="/book-now" className={style.bookNow}>
-          Book Now
-        </Link>
+        <div></div>
         <div className={style.menu} onClick={() => setIsMenuClick(true)}>
           <IconMenu2 className={style.icon} />
         </div>

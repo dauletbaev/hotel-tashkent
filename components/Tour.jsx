@@ -1,27 +1,20 @@
 import Image from "next/image";
 import style from "../styles/Tour.module.scss";
+import useTranslation from "next-translate/useTranslation";
 
 function Tour() {
+  const { t } = useTranslation("common");
+
   return (
     <div className={style.tour}>
       <div className={style.left}>
         <Image src="/images/tour.png" width={200} height={250} alt="" />
       </div>
       <div className={style.right}>
-        <span>Luxury Hotel</span>
-        <h1>Pearl Of The Adriatic.</h1>
-        <p>
-          Vestibulum non ornare nunc. Maecenas a metus in est iaculis pretium.
-          Aliquam ullamcorper nibh lacus, ac suscipit ipsum consequat
-          porttitor.Aenean vehicula ligula eu rhoncus porttitor. Duis vel
-          lacinia quam. Nunc rutrum porta ex, in imperdiet tortor feugiat at.
-        </p>
-        <p>
-          Cras finibus laoreet felis et hendrerit. Integer ligula lorem, finibus
-          vitae lorem at, egestas consectetur urna. Integer id ultricies elit.
-          Maecenas sodales nibh, quis posuere felis. In commodo mi lectus
-          venenatis metus eget fringilla. Suspendisse varius ante eget.
-        </p>
+        <span>{t("tour_sub_title")}</span>
+        <h1>{t("tour_title")}</h1>
+        <p>{t("tour_desc_1")}</p>
+        <p>{t("tour_desc_2")}</p>
       </div>
     </div>
   );

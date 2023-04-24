@@ -8,22 +8,18 @@ import {
   IconHotelService,
 } from "@tabler/icons-react";
 import style from "../styles/Room.module.scss";
+import useTranslation from "next-translate/useTranslation";
 
 function Room({ page }) {
+  const { t } = useTranslation("common");
+
   return (
     <div className={style.room}>
       <div className={style.container}>
         <div className={style.title}>
-          {page !== "single" && <span>Room</span>}
-          <h1>{page === "single" ? "Other rooms" : "Rooms & Suites"}</h1>
-          {page !== "single" && (
-            <p>
-              Proin consectetur non dolor vitae pulvinar. Pellentesque
-              sollicitudin dolor eget neque viverra, sed interdum metus
-              interdum. Cras lobortis pulvinar dolor, sit amet ullamcorper dolor
-              iaculis vel
-            </p>
-          )}
+          {page !== "single" && <span>{t("room")}</span>}
+          <h1>{page === "single" ? t("room_title_1") : t("room_title_2")}</h1>
+          {page !== "single" && <p>{t("room_desc")}</p>}
         </div>
 
         <div className={style.items}>
@@ -38,14 +34,11 @@ function Room({ page }) {
                 />
                 <div className={style.bottom}>
                   <div className={style.buttons}>
-                    <Link href="/single-room">View</Link>
-                    <Link href="/book-now">Book Now</Link>
+                    <Link href="/single-room">{t("room_view")}</Link>
+                    <Link href="/book-now">{t("room_book_now")}</Link>
                   </div>
-                  <h2>Delux Double Room</h2>
-                  <p>
-                    Nullam molestie lacus sit amet velit fermentum feugiat.
-                    Mauris auctor eget nunc sit amet.
-                  </p>
+                  <h2>{t("room_1_title")}</h2>
+                  <p>{t("room_1_desc")}</p>
                   <div className={style.icons}>
                     <IconWifi className={style.icon} />
                     <IconHotelService className={style.icon} />
@@ -66,14 +59,11 @@ function Room({ page }) {
                 />
                 <div className={style.bottom}>
                   <div className={style.buttons}>
-                    <Link href="/single-room">View</Link>
-                    <Link href="/book-now">Book Now</Link>
+                    <Link href="/single-room">{t("room_view")}</Link>
+                    <Link href="/book-now">{t("room_book_now")}</Link>
                   </div>
-                  <h2>Super Balcony Double Room</h2>
-                  <p>
-                    Nullam molestie lacus sit amet velit fermentum feugiat.
-                    Mauris auctor eget nunc sit amet.
-                  </p>
+                  <h2>{t("room_2_title")}</h2>
+                  <p>{t("room_2_desc")}</p>
                   <div className={style.icons}>
                     <IconWifi className={style.icon} />
                     <IconHotelService className={style.icon} />
@@ -96,14 +86,11 @@ function Room({ page }) {
                 />
                 <div className={style.bottom}>
                   <div className={style.buttons}>
-                    <Link href="/single-room">View</Link>
-                    <Link href="/book-now">Book Now</Link>
+                    <Link href="/single-room">{t("room_view")}</Link>
+                    <Link href="/book-now">{t("room_book_now")}</Link>
                   </div>
-                  <h2>Superior Double Room</h2>
-                  <p>
-                    Nullam molestie lacus sit amet velit fermentum feugiat.
-                    Mauris auctor eget nunc sit amet.
-                  </p>
+                  <h2>{t("room_3_title")}</h2>
+                  <p>{t("room_3_desc")}</p>
                   <div className={style.icons}>
                     <IconWifi className={style.icon} />
                     <IconHotelService className={style.icon} />
@@ -124,14 +111,11 @@ function Room({ page }) {
                 />
                 <div className={style.bottom}>
                   <div className={style.buttons}>
-                    <Link href="/single-room">View</Link>
-                    <Link href="/book-now">Book Now</Link>
+                    <Link href="/single-room">{t("room_view")}</Link>
+                    <Link href="/book-now">{t("room_book_now")}</Link>
                   </div>
-                  <h2>Superior Double Room</h2>
-                  <p>
-                    Nullam molestie lacus sit amet velit fermentum feugiat.
-                    Mauris auctor eget nunc sit amet.
-                  </p>
+                  <h2>{t("room_4_title")}</h2>
+                  <p>{t("room_4_desc")}</p>
                   <div className={style.icons}>
                     <IconWifi className={style.icon} />
                     <IconHotelService className={style.icon} />
