@@ -1,8 +1,11 @@
 import { IconCheck } from "@tabler/icons-react";
 import Image from "next/image";
 import style from "../styles/AboutUs.module.scss";
+import useTranslation from "next-translate/useTranslation";
 
 function AboutUs({ page }) {
+  const { t } = useTranslation("common");
+
   return (
     <div className={style.aboutUs}>
       <div className={style.container}>
@@ -25,39 +28,27 @@ function AboutUs({ page }) {
         </div>
 
         <div className={style.right}>
-          <span>About Us</span>
-          <h1>Most Safe & Rated Hotel In Nukus.</h1>
-          <p>
-            Morbi tortor urna, placerat vel arcu quis, fringilla egestas neque.
-            Morbi sit amet porta erat, quis rutrum risus. Vivamus et gravida
-            nibh, quis posuere felis. In commodo mi lectus, Integer ligula
-            lorem, finibus vitae lorem vitae tincidunt dolor consequat quis.
-          </p>
-          <p>
-            Cras finibus laoreet felis et hendrerit. Integer ligula lorem,
-            finibus vitae lorem at, egestas consectetur urna. Integer id
-            ultricies elit. Maecenas sodales nibh, quis posuere felis. In
-            commodo mi lectus venenatis metus eget fringilla. Suspendisse varius
-            ante eget lorem tempus blandit. Aenean eu vulputate lorem, quis
-            auctor lectus.
-          </p>
+          <span>{t("about_us_sub_title")}</span>
+          <h1>{t("about_us_title")}</h1>
+          <p>{t("about_us_desc_1")}</p>
+          <p>{t("about_us_desc_2")}</p>
 
           <ul>
             <li>
               <IconCheck className={style.icon} />
-              24 Month / 24,000km Nationwide Warranty monotone
+              {t("about_us_tick_1")}
             </li>
             <li>
               <IconCheck className={style.icon} />
-              Curabitur dapibus nisl a urna congue, in pharetra urna accumsan.
+              {t("about_us_tick_2")}
             </li>
             <li>
               <IconCheck className={style.icon} />
-              Customer Rewards Program and excellent technology
+              {t("about_us_tick_3")}
             </li>
           </ul>
 
-          {page === "home" && <button>DISCOVER MORE</button>}
+          {page === "home" && <button>{t("about_us_discover_more")}</button>}
         </div>
       </div>
     </div>

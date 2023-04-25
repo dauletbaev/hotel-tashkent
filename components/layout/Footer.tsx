@@ -6,12 +6,15 @@ import {
   IconBrandTelegram,
   IconBrandInstagram,
   IconBrandFacebook,
-} from '@tabler/icons-react'
-import style from '../../styles/Footer.module.scss'
+} from "@tabler/icons-react";
+import style from "../../styles/Footer.module.scss";
+import useTranslation from "next-translate/useTranslation";
 
 const year = new Date().getFullYear()
 
 function Footer() {
+  const { t } = useTranslation("common");
+
   return (
     <div className={style.footer}>
       <div className={style.container}>
@@ -25,38 +28,61 @@ function Footer() {
               <span className={style.iconCover}>
                 <IconPhone className={style.icon} />
               </span>
-              +99893 772-71-66
+              {t("phone_number_1")} {t("phone_number_2")}
             </div>
             <div className={style.item}>
               <span className={style.iconCover}>
                 <IconMail className={style.icon} />
               </span>
-              contact@tashkenthotel.info
+              {t("email_address")}
             </div>
             <div className={style.item}>
               <div className={style.iconCover}>
                 <IconMapPin className={style.icon} />
               </div>
-              <span>1247/Plot No. 39, 15th, Nukus, Karakalpakstan</span>
+              {t("hotel_address")}
             </div>
           </div>
         </div>
 
         <div className={style.right}>
           <div className={style.links}>
-            <h2>Our Links</h2>
+            <h2>{t("footer_links")}</h2>
             <ul>
               <li>
-                <Link href="/">Home</Link>
+                <Link href="/">{t("menu_home")}</Link>
               </li>
               <li>
-                <Link href="/">Our rooms</Link>
+                <Link href="/">{t("menu_rooms")}</Link>
               </li>
               <li>
-                <Link href="/">About</Link>
+                <Link href="/">{t("menu_about")}</Link>
               </li>
               <li>
-                <Link href="/">Contact</Link>
+                <Link href="/">{t("menu_contact")}</Link>
+              </li>
+              <li className="flex gap-2">
+                <Link
+                  href="https://f.me/21345"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <IconBrandFacebook />
+                </Link>
+                <Link
+                  href="https://instagram.com/21345"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <IconBrandInstagram />
+                </Link>
+                <Link
+                  href="https://t.me/21345"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
+                  <IconBrandTelegram />
+                </Link>
               </li>
             </ul>
           </div>
@@ -118,7 +144,7 @@ function Footer() {
             target="_blank"
             rel="noreferrer noopener"
           >
-            Developed by BIZLER GROUP
+            {t("footer_developer")}
           </Link>
         </div>
       </div>

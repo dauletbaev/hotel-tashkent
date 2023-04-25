@@ -1,11 +1,9 @@
-import { useState, useEffect, useCallback } from 'react'
-import { IconMenu2, IconX } from '@tabler/icons-react'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import style from '../../styles/Navbar.module.scss'
-import { locales } from '~/i18n.js'
-import useTranslation from 'next-translate/useTranslation'
-import Image from 'next/image'
+import { useState, useEffect, useCallback } from "react";
+import { IconMenu2, IconX } from "@tabler/icons-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import style from "../../styles/Navbar.module.scss";
+import useTranslation from "next-translate/useTranslation";
 import {
   IconClockHour4,
   IconPhone,
@@ -13,20 +11,19 @@ import {
   IconBrandTelegram,
   IconBrandInstagram,
   IconBrandFacebook,
-} from '@tabler/icons-react'
-
-const TEL = '+998937727166'
+} from "@tabler/icons-react";
+import Image from "next/image";
+import { locales } from "~/i18n";
 
 function Navbar() {
-  const { t, lang } = useTranslation('common')
-
-  const pathname = usePathname()
-  const [scrollPosition, setScrollPosition] = useState(0)
-  const [isMenuClick, setIsMenuClick] = useState(false)
+  const { t, lang } = useTranslation("common");
+  const pathname = usePathname();
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [isMenuClick, setIsMenuClick] = useState(false);
 
   const closeMenu = useCallback(() => {
-    setIsMenuClick(false)
-  }, [])
+    setIsMenuClick(false);
+  }, []);
 
   const handleScroll = useCallback(() => {
     const position = window.pageYOffset
@@ -71,17 +68,17 @@ function Navbar() {
             </div>
           </div>
 
-          <li onClick={closeMenu}>
-            <Link href="/">Home</Link>
-          </li>
-          <li onClick={closeMenu}>
-            <Link href="/rooms">Our Rooms</Link>
-          </li>
-          <li onClick={closeMenu}>
-            <Link href="/about">About</Link>
+          <li>
+            <Link href="/">{t("menu_home")}</Link>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <Link href="/rooms">{t("menu_rooms")}</Link>
+          </li>
+          <li>
+            <Link href="/about">{t("menu_about")}</Link>
+          </li>
+          <li>
+            <Link href="/contact">{t("menu_contact")}</Link>
           </li>
           <li className={style.lang}>
             {locales.map((lng) => (
@@ -95,8 +92,9 @@ function Navbar() {
               </Link>
             ))}
           </li>
+
           <div className={style.bottom}>
-            <h2>CONTACT INFO</h2>
+            <h2>{t("menu_contact_info")}</h2>
             <div className={style.contact}>
               <div>
                 <span className={style.iconWrapper}>
@@ -108,13 +106,19 @@ function Navbar() {
                 <span className={style.iconWrapper}>
                   <IconMail className={style.icon} size={15} />
                 </span>
-                <span className={style.text}>tashkenthotel2018@gmail.com</span>
+                <span className={style.text}>{t("email_address")}</span>
               </div>
-              <Link href={`tel:${TEL}`} className="ml-5 flex gap-1">
+              <Link
+                href={`tel:${t("phone_number_1")}`}
+                className="ml-5 flex gap-1"
+              >
                 <span className={style.iconWrapper}>
                   <IconPhone className={style.icon} size={15} />
                 </span>
-                <span className={style.text}>{TEL}</span>
+                <div className="flex flex-col">
+                  <span className={style.text}>{t("phone_number_1")}</span>
+                  <span className={style.text}>{t("phone_number_2")}</span>
+                </div>
               </Link>
             </div>
             <div className={style.links}>
@@ -130,9 +134,13 @@ function Navbar() {
             </div>
           </div>
         </ul>
+
+        <div></div>
+
         {/* <Link href="/book-now" className={style.bookNow}>
           Book Now
         </Link> */}
+
         <div className={style.menu} onClick={() => setIsMenuClick(true)}>
           <IconMenu2 className={style.icon} />
         </div>

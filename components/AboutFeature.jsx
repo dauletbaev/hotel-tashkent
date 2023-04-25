@@ -1,18 +1,17 @@
 import Image from "next/image";
 import style from "../styles/AboutFeature.module.scss";
+import useTranslation from "next-translate/useTranslation";
 
 function AboutFeature() {
+  const { t } = useTranslation("common");
+
   return (
     <div className={style.aboutFeature}>
       <div className={style.container}>
         <div className={style.title}>
-          <span>Our Features</span>
-          <h1>Sunny and warm Nukus is the capital of Karakalpakstan</h1>
-          <p>
-            Proin consectetur non dolor vitae pulvinar. Pellentesque
-            sollicitudin dolor eget neque viverra, sed interdum metus interdum.
-            Cras lobortis pulvinar dolor, sit amet ullamcorper dolor iaculis vel
-          </p>
+          <span>{t("about_feature_sub_title")}</span>
+          <h1>{t("about_feature_title")}</h1>
+          <p>{t("about_feature_desc")}</p>
         </div>
         <div className={style.features}>
           <div className={style.left}>
@@ -24,12 +23,8 @@ function AboutFeature() {
                   height={250}
                   alt=""
                 />
-                <h2>Furniture</h2>
-                <span>
-                  Our furniture brought from abroad to order. A carefully
-                  selected palette of color and style will always be
-                  recognizable among our guests.
-                </span>
+                <h2>{t("about_feature_1_title")}</h2>
+                <span>{t("about_feature_1_desc")}</span>
                 <b></b>
               </div>
               <div className={style.item}>
@@ -39,11 +34,8 @@ function AboutFeature() {
                   height={250}
                   alt=""
                 />
-                <h2>Best service</h2>
-                <span>
-                  Our motto is to be the best in our field. And the most
-                  important thing is to always keep a high level of service.
-                </span>
+                <h2>{t("about_feature_3_title")}</h2>
+                <span>{t("about_feature_3_desc")}</span>
                 <b></b>
               </div>
             </div>
@@ -57,12 +49,8 @@ function AboutFeature() {
                   height={250}
                   alt=""
                 />
-                <h2>Food and beverages</h2>
-                <span>
-                  Delicious and healthy food is always to everyone&apos;s
-                  liking, especially when food reduces fatigue and stress during
-                  travel. And we know about this!
-                </span>
+                <h2>{t("about_feature_2_title")}</h2>
+                <span>{t("about_feature_2_desc")}</span>
                 <b></b>
               </div>
             </div>
