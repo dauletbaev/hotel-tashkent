@@ -68,16 +68,16 @@ function Navbar() {
             </div>
           </div>
 
-          <li>
+          <li onClick={closeMenu}>
             <Link href="/">{t("menu_home")}</Link>
           </li>
-          <li>
+          <li onClick={closeMenu}>
             <Link href="/rooms">{t("menu_rooms")}</Link>
           </li>
-          <li>
+          <li onClick={closeMenu}>
             <Link href="/about">{t("menu_about")}</Link>
           </li>
-          <li>
+          <li onClick={closeMenu}>
             <Link href="/contact">{t("menu_contact")}</Link>
           </li>
           <li className={style.lang}>
