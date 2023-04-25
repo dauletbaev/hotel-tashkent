@@ -61,29 +61,6 @@ function Footer() {
               <li>
                 <Link href="/">{t("menu_contact")}</Link>
               </li>
-              <li className="flex gap-2">
-                <Link
-                  href="https://f.me/21345"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <IconBrandFacebook />
-                </Link>
-                <Link
-                  href="https://instagram.com/21345"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <IconBrandInstagram />
-                </Link>
-                <Link
-                  href="https://t.me/21345"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                >
-                  <IconBrandTelegram />
-                </Link>
-              </li>
             </ul>
           </div>
           {/* <div className={style.subscribe}>
