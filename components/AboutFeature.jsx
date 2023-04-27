@@ -18,7 +18,7 @@ function AboutFeature() {
             <div className={style.items}>
               <div className={style.item}>
                 <Image
-                  src="/images/about-feature-1.jpg"
+                  src="/pictures/ADC_0165-min.jpg"
                   width={200}
                   height={250}
                   alt=""

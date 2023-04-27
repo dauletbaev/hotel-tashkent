@@ -8,7 +8,7 @@ function Tour() {
   return (
     <div className={style.tour}>
       <div className={style.left}>
-        <Image src="/images/tour.png" width={200} height={250} alt="" />
+        <Image src="/pictures/ADC_0017-min.jpg" width={200} height={250} alt="" />
       </div>
       <div className={style.right}>
         <span>{t("tour_sub_title")}</span>

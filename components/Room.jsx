@@ -27,7 +27,7 @@ function Room({ page }) {
             <div className={style.item}>
               <div className={style.container}>
                 <Image
-                  src="/images/room-1.png"
+                  src="/pictures/ADC_0009-min.jpg"
                   width={200}
                   height={250}
                   alt="Quality Room"
@@ -52,7 +52,7 @@ function Room({ page }) {
             <div className={style.item}>
               <div className={style.container}>
                 <Image
-                  src="/images/room-2.png"
+                  src="/pictures/ADC_0003-min.jpg"
                   width={200}
                   height={250}
                   alt="Quality Room"
@@ -79,7 +79,7 @@ function Room({ page }) {
             <div className={style.item}>
               <div className={style.container}>
                 <Image
-                  src="/images/room-3.png"
+                  src="/pictures/ADC_0017-min.jpg"
                   width={200}
                   height={250}
                   alt="Quality Room"
@@ -101,7 +101,7 @@ function Room({ page }) {
               </div>
             </div>
 
-            <div className={style.item}>
+            {/* <div className={style.item}>
               <div className={style.container}>
                 <Image
                   src="/images/room-2.png"
@@ -124,7 +124,7 @@ function Room({ page }) {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

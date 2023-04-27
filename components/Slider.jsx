@@ -6,11 +6,11 @@ function Slider() {
 
   const slides = [
     {
-      url: "/images/slider-bg-1.png",
+      url: "/pictures/ADC_0165-min.jpg",
       title: t("home_slider_title_1"),
     },
     {
-      url: "/images/slider-bg-2.png",
+      url: "/pictures/ADC_0142-min.jpg",
       title: t("home_slider_title_2"),
     },
   ];
