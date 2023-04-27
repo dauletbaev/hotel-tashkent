@@ -24,10 +24,7 @@ function Header() {
           </Link>
         </div>
         <div className="flex gap-2">
-          {locales.map((lng) => {
-            if (lng === lang) return null;
-
-            return (
+          {locales.map((lng) => (
               <Link
                 href="/"
                 locale={lng}
@@ -38,13 +35,12 @@ function Header() {
                   src={`/images/${lng}.webp`}
                   width={20}
                   height={20}
-                  alt={`${lang}`}
+                  alt={lang}
                   className="mr-1"
                 />
                 {t(`language-name-${lng}`)}
               </Link>
-            );
-          })}
+            ))}
         </div>
       </div>
     </div>

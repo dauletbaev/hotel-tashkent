@@ -28,7 +28,9 @@ function Footer() {
               <span className={style.iconCover}>
                 <IconPhone className={style.icon} />
               </span>
-              {t("phone_number_1")} {t("phone_number_2")}
+              {t("phone_number_1")}
+              <br />
+              {t("phone_number_2")}
             </div>
             <div className={style.item}>
               <span className={style.iconCover}>

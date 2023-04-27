@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import style from "../../styles/Navbar.module.scss";
 import useTranslation from "next-translate/useTranslation";
 import {
@@ -17,7 +16,6 @@ import { locales } from "~/i18n";
 
 function Navbar() {
   const { t, lang } = useTranslation("common");
-  const pathname = usePathname();
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isMenuClick, setIsMenuClick] = useState(false);
 
@@ -68,29 +66,33 @@ function Navbar() {
             </div>
           </div>
 
-          <li onClick={closeMenu}>
+          <li>
             <Link href="/">{t("menu_home")}</Link>
           </li>
-          <li onClick={closeMenu}>
+          <li>
             <Link href="/rooms">{t("menu_rooms")}</Link>
           </li>
-          <li onClick={closeMenu}>
+          <li>
             <Link href="/about">{t("menu_about")}</Link>
           </li>
-          <li onClick={closeMenu}>
+          <li>
             <Link href="/contact">{t("menu_contact")}</Link>
           </li>
           <li className={style.lang}>
-            {locales.map((lng) => (
-              <Link href="/" locale={lng} key={lng}>
-                <Image
-                  src={`/images/${lng}.webp`}
-                  width={20}
-                  height={20}
-                  alt={`${lang}`}
-                />
-              </Link>
-            ))}
+            {locales.map((lng) => {
+              if (lng === lang) return null;
+
+              return (
+                <Link href="/" locale={lng} key={lng}>
+                  <Image
+                    src={`/images/${lng}.webp`}
+                    width={20}
+                    height={20}
+                    alt={`${lang}`}
+                  />
+                </Link>
+              )
+            })}
           </li>
 
           <div className={style.bottom}>
