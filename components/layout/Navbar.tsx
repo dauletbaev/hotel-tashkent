@@ -139,10 +139,6 @@ function Navbar() {
 
         <div></div>
 
-        {/* <Link href="/book-now" className={style.bookNow}>
-          Book Now
-        </Link> */}
-
         <div className={style.menu} onClick={() => setIsMenuClick(true)}>
           <IconMenu2 className={style.icon} />
         </div>

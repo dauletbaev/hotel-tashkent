@@ -81,7 +81,7 @@ function ImageSlider({ slides, page }: Props) {
               <h1>{slides[currentIndex].title}</h1>
               <p>{t('home_slider_desc')}</p>
               <Link href="/book-now" className={style.bookNow}>
-                Book Now
+                {t('room_book_now')}
               </Link>
             </>
           )}
