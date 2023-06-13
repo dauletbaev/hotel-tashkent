@@ -81,7 +81,7 @@ function Footer() {
 
         <div>
           <h2 className="font-bold text-[20px] mb-[30px] max-md:my-4">
-            We are in social media
+            {t('footer_social')}
           </h2>
           <div className="flex max-md:items-center max-md:justify-center flex-col gap-2">
             <Link

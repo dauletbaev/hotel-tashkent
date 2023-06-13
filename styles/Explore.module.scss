@@ -43,7 +43,7 @@
           transition: all 0.3s ease;
 
           .container {
-            height: 350px;
+            min-height: 500px;
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -159,6 +159,7 @@
 
           .item {
             .container {
+              max-height: unset;
               h2 {
                 font-size: 20px;
               }

@@ -16,7 +16,7 @@ function ContactUs() {
         <div className={style.title}>
           <span>{t("contact_sub_title")}</span>
           <h1>{t("contact_title")}</h1>
-          <p>{t("contact_desc")}</p>
+          {/* <p>{t("contact_desc")}</p> */}
         </div>
         <div className={style.items}>
           <div className={style.left}>
