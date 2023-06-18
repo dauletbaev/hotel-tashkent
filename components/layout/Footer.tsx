@@ -94,7 +94,7 @@ function Footer() {
               <span>Facebook</span>
             </Link>
             <Link
-              href="https://instagram.com/21345"
+              href="https://instagram.com/hoteltashkentuzbekistan"
               target="_blank"
               className="flex items-center gap-2"
               rel="noreferrer noopener"
