@@ -1,8 +1,8 @@
-import { useState, useEffect, useCallback } from "react";
-import { IconMenu2, IconX } from "@tabler/icons-react";
-import Link from "next/link";
-import style from "../../styles/Navbar.module.scss";
-import useTranslation from "next-translate/useTranslation";
+import { useState, useEffect, useCallback } from 'react'
+import { IconMenu2, IconX } from '@tabler/icons-react'
+import Link from 'next/link'
+import style from '../../styles/Navbar.module.scss'
+import useTranslation from 'next-translate/useTranslation'
 import {
   IconClockHour4,
   IconPhone,
@@ -10,18 +10,18 @@ import {
   IconBrandTelegram,
   IconBrandInstagram,
   IconBrandFacebook,
-} from "@tabler/icons-react";
-import Image from "next/image";
-import { locales } from "~/i18n";
+} from '@tabler/icons-react'
+import Image from 'next/image'
+import { locales } from '~/i18n'
 
 function Navbar() {
-  const { t, lang } = useTranslation("common");
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [isMenuClick, setIsMenuClick] = useState(false);
+  const { t, lang } = useTranslation('common')
+  const [scrollPosition, setScrollPosition] = useState(0)
+  const [isMenuClick, setIsMenuClick] = useState(false)
 
   const closeMenu = useCallback(() => {
-    setIsMenuClick(false);
-  }, []);
+    setIsMenuClick(false)
+  }, [])
 
   const handleScroll = useCallback(() => {
     const position = window.pageYOffset
@@ -67,20 +67,20 @@ function Navbar() {
           </div>
 
           <li>
-            <Link href="/">{t("menu_home")}</Link>
+            <Link href="/">{t('menu_home')}</Link>
           </li>
           <li>
-            <Link href="/rooms">{t("menu_rooms")}</Link>
+            <Link href="/rooms">{t('menu_rooms')}</Link>
           </li>
           <li>
-            <Link href="/about">{t("menu_about")}</Link>
+            <Link href="/about">{t('menu_about')}</Link>
           </li>
           <li>
-            <Link href="/contact">{t("menu_contact")}</Link>
+            <Link href="/contact">{t('menu_contact')}</Link>
           </li>
           <li className={style.lang}>
             {locales.map((lng) => {
-              if (lng === lang) return null;
+              if (lng === lang) return null
 
               return (
                 <Link href="/" locale={lng} key={lng}>
@@ -96,7 +96,7 @@ function Navbar() {
           </li>
 
           <div className={style.bottom}>
-            <h2>{t("menu_contact_info")}</h2>
+            <h2>{t('menu_contact_info')}</h2>
             <div className={style.contact}>
               <div>
                 <span className={style.iconWrapper}>
@@ -108,31 +108,40 @@ function Navbar() {
                 <span className={style.iconWrapper}>
                   <IconMail className={style.icon} size={15} />
                 </span>
-                <span className={style.text}>{t("email_address")}</span>
+                <span className={style.text}>{t('email_address')}</span>
               </div>
               <Link
-                href={`tel:${t("phone_number_1")}`}
+                href={`tel:${t('phone_number_1')}`}
                 className="ml-5 flex gap-1"
               >
                 <span className={style.iconWrapper}>
                   <IconPhone className={style.icon} size={15} />
                 </span>
                 <div className="flex flex-col">
-                  <span className={style.text}>{t("phone_number_1")}</span>
-                  <span className={style.text}>{t("phone_number_2")}</span>
+                  <span className={style.text}>{t('phone_number_1')}</span>
+                  <span className={style.text}>{t('phone_number_2')}</span>
                 </div>
               </Link>
             </div>
             <div className={style.links}>
-              <div className={style.iconWrapper}>
+              <Link
+                className={style.iconWrapper}
+                href="https://t.me/hoteltashkentuzbekistan"
+              >
                 <IconBrandTelegram size={15} />
-              </div>
-              <div className={style.iconWrapper}>
+              </Link>
+              <Link
+                href="https://instagram.com/hoteltashkentuzbekistan"
+                className={style.iconWrapper}
+              >
                 <IconBrandInstagram size={15} />
-              </div>
-              <div className={style.iconWrapper}>
+              </Link>
+              <Link
+                href="https://fb.com/hoteltashkentuzbekistan"
+                className={style.iconWrapper}
+              >
                 <IconBrandFacebook size={15} />
-              </div>
+              </Link>
             </div>
           </div>
         </ul>

@@ -85,7 +85,7 @@ function Footer() {
           </h2>
           <div className="flex max-md:items-center max-md:justify-center flex-col gap-2">
             <Link
-              href="https://f.me/21345"
+              href="https://fb.com/hoteltashkentuzbekistan"
               className="flex items-center gap-2"
               target="_blank"
               rel="noreferrer noopener"
@@ -103,7 +103,7 @@ function Footer() {
               <span>Instagram</span>
             </Link>
             <Link
-              href="https://t.me/21345"
+              href="https://t.me/hoteltashkentuzbekistan"
               target="_blank"
               className="flex items-center gap-2"
               rel="noreferrer noopener"
