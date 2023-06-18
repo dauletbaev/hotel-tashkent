@@ -103,7 +103,7 @@ function Room({ page }) {
             <div className={style.item}>
               <div className={style.container}>
                 <Image
-                  src="/images/room-2.png"
+                  src="/images/2-person.jpg"
                   width={200}
                   height={250}
                   alt="Quality Room"
@@ -128,7 +128,7 @@ function Room({ page }) {
             <div className={style.item}>
               <div className={style.container}>
                 <Image
-                  src="/images/room-2.png"
+                  src="/images/3-person.jpg"
                   width={200}
                   height={250}
                   alt="Quality Room"
