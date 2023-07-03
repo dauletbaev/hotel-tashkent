@@ -2,29 +2,27 @@
   "language-name-ru": "RU",
   "language-name-en": "EN",
   "language-name-uz": "UZ",
-
+  "title": "Tashkent Hotel",
+  "meta_description": "Discover the perfect blend of luxury and comfort at our boutique hotel in Nukus. Immerse yourself in breathtaking mountain views, unwind in our spa, and indulge in exquisite cuisine at our on-site restaurant. Whether you're here for business or pleasure, our pet-friendly accommodations and attentive service ensure a memorable stay. Book your stay today and experience the finest hospitality Nukus has to offer.",
+  "meta_keywords": "Tashkent, Tashkent Hotel,Nukus,Accommodation,Luxury hotel,Boutique hotel,Budget hotel,Business hotel,Resort,Family-friendly hotel,Pet-friendly hotel,Beachfront hotel,Mountain view hotel,City center hotel,Conference facilities,Restaurant,Bar,Swimming pool,Gym/fitness center",
   "working_hours": "Mon-Sat 9:00 - 19:00",
   "hotel_address": "Nukus, avenue Uzbekistan Guzary №73. LLC “HOTEL TASHKENT”",
   "email_address": "tashkenthotel2018@gmail.com",
   "phone_number_1": "(+998 61) 224-02-00",
   "phone_number_2": "(+998 88) 355-02-00",
   "instagram_accaunt": "hoteltashkentuzbekistan",
-
   "book_now_phone": "Phone No.: ",
   "book_now_email": "Email: ",
   "book_now_instagram": "Instagram: ",
-
   "menu_home": "Home",
   "menu_rooms": "Our Rooms",
   "menu_about": "About",
   "menu_contact": "Contact",
   "menu_contact_info": "Contact Info",
-
   "home_slider_title_1": "Enjoy a Luxury Experience",
   "home_slider_title_2": "The most comfortable rooms in Nukus",
   "home_slider_desc": "Welcome to our cozy hotel! We offer you comfortable rooms where you can have a pleasant and pleasant stay.",
   "book_now": "Book now",
-
   "room_sub_title": "Room",
   "room_title_1": "Rooms & Suites",
   "room_title_2": "Other rooms",
@@ -42,7 +40,6 @@
   "room_4_desc": "Unwind in our stylish double rooms, designed to provide a comfortable and inviting space for two guests.",
   "room_5_title": "Triple",
   "room_5_desc": "Accommodate your group or family comfortably in our triple rooms, featuring ample space and thoughtful amenities for a memorable stay.",
-
   "single_room_slider_title_1": "· Delux Double Room ·",
   "single_room_slider_title_2": "More than meets the eye",
   "single_room_feature_1": "Queen Size Bed",
@@ -53,7 +50,6 @@
   "single_room_title": "Tashkent Hotel facilities",
   "single_room_desc": "Hotel offers – 8 Standard Single rooms Queen Size bed (1.60 x 2m), and also upper floors accessible by elevator, linen, wardrobe or closet, hand sanitizer, tea-coffee maker minibar, air conditioning, safety deposit box, soundproofing, iron and ironing facilities, heating, carpeted, laptop safe, electric kettle, tumble dryer, desk, seating area,Smart TV, telephone, satellite channels, cable channels, air purifiers installed, socket near the bed, clothes rack and also wake up call service.",
   "single_room_book_now": "Book Now",
-
   "about_us_sub_title": "About Us",
   "about_us_title": "Most Safe & Rated Hotel In Nukus.",
   "about_us_desc_1": "Our hotel offers a relaxing atmosphere and many amenities for a comfortable stay. We offer a variety of accommodation options that are suitable for a group of friends or families with children. Rooms with a double bed and an extra sofa bed can easily accommodate a group of friends or a family with children.",
@@ -72,7 +68,6 @@
   "about_feature_3_title": "Best service",
   "about_feature_3_desc": "Our motto is to be the best in our field. And the most important thing is to always keep a high level of service.",
   "about_us_discover_more": "Discover More",
-
   "contact_sub_title": "Contact Us",
   "contact_title": "Easy to find",
   "contact_slider_title": "Great choice for a relaxing vacation for families with children or a group of friends",
@@ -90,7 +85,6 @@
   "contact_form_phone_number": "Phone Number",
   "contact_form_submit": "Submit Now",
   "contact_submit": "Submit Now",
-
   "explore_sub_title": "Explore",
   "explore_title": "The Hotel",
   "explore_desc": "Immerse yourself in a serene ambiance and enjoy a wide range of amenities that ensure a tranquil and enjoyable stay at our hotel.",
@@ -103,7 +97,6 @@
   "explore_feature_4_title": "Special Offers",
   "explore_feature_4_desc": "Take advantage of our enticing Special Offers and elevate your stay to new heights. Designed to provide exceptional value and enhance your experience, our exclusive offers cater to various preferences and occasions",
   "explore_read_more": "Read More",
-
   "testimonial_sub_title": "Testimonial",
   "testimonial_title": "What Our Clients Says",
   "testimonial_desc": "Don't just take our word for it, hear what our guests have to say about their stay at our hotel",
@@ -116,12 +109,10 @@
   "testimonial_testi_3_name": "Mark",
   "testimonial_testi_3_type": "Клиент",
   "testimonial_testi_3_desc": "“Great hotel - wonderful room, helpful and pleasant staff at reception, excellent cleaning staff who worked really hard to keep the place neat and tidy.  There isn't a great deal to in Nukus, but Tashkent Hotel is in a great position.  The free airport transfer is handy.”",
-  
   "tour_sub_title": "Luxury Hotel",
   "tour_title": "Savoring the City's Beauty: A Moment of Visual Bliss",
   "tour_desc_1": "It's great that you can enjoy a beautiful view from your hotel window! The view of the entire city can be very impressive and captivating. You can observe the bustling city life, admire the magnificent architecture of buildings and skyscrapers, and see vast parks and greenery. Even if you're busy with work, try to take a moment and appreciate the stunning city view during your free time.",
   "tour_desc_2": "As the sun bathes the city in its warm glow, the view from the hotel window comes alive. The bustling streets, majestic skyscrapers, and lush green spaces create a captivating tapestry. Each glance reveals a new detail—a sparkling reflection, a historic silhouette—inviting appreciation. In these fleeting moments, the ever-changing panorama captivates, reminding us of the city's grandeur and beauty.",
-
   "footer_links": "Our Links",
   "footer_social": "We are in social media",
   "footer_developer": "Developed by BIZLER GROUP"
