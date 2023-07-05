@@ -29,7 +29,7 @@ function AboutFeature() {
               </div>
               <div className={style.item}>
                 <Image
-                  src="/images/about-feature-2.jpeg"
+                  src="/images/restaurant.JPG"
                   width={200}
                   height={250}
                   alt=""
@@ -44,7 +44,7 @@ function AboutFeature() {
             <div className={style.items}>
               <div className={style.item}>
                 <Image
-                  src="/images/about-feature-3.jpg"
+                  src="/images/bar.JPG"
                   width={200}
                   height={250}
                   alt=""
